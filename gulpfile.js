@@ -116,3 +116,5 @@ exports.pugToHTML = pugToHTML
 exports.scssToCSS = scssToCSS
 exports.ecmaScriptToJS = ecmaScriptToJS
 exports.default = series(pugToHTML, scssToCSS, ecmaScriptToJS, parallel(watchFiles, serve))
+exports.build = series(pugToHTML, scssToCSS, ecmaScriptToJS)
+exports.serve = series(pugToHTML, scssToCSS, ecmaScriptToJS, serve)
